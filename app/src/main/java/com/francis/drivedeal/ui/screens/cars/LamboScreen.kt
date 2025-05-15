@@ -125,7 +125,7 @@ fun LamboScreen(navController: NavController) {
                                 },
                                 colors = ButtonDefaults.buttonColors(containerColor = newblue)
                             ) {
-                                Text("Message Dealer", color = newblack)
+                                Text("Message Dealer", color = Color.White)
                             }
                             Button(
                                 onClick = {
@@ -134,7 +134,7 @@ fun LamboScreen(navController: NavController) {
                                 },
                                 colors = ButtonDefaults.buttonColors(containerColor = newblue)
                             ) {
-                                Text("Buy Now", color = newblack)
+                                Text("Buy Now", color = Color.White)
                             }
                         }
                     }

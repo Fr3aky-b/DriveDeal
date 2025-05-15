@@ -76,8 +76,10 @@ import com.francis.drivedeal.R
 import com.francis.drivedeal.model.Car
 import com.francis.drivedeal.navigation.ROUT_ADD_PRODUCT
 import com.francis.drivedeal.navigation.ROUT_EDIT_PRODUCT
+import com.francis.drivedeal.navigation.ROUT_HOME
 import com.francis.drivedeal.navigation.ROUT_PRODUCT_LIST
 import com.francis.drivedeal.navigation.editProductRoute
+import com.francis.drivedeal.ui.screens.products.ProductItem
 import com.francis.drivedeal.ui.theme.newblue
 import com.francis.drivedeal.ui.theme.newwhite
 
@@ -175,7 +177,7 @@ fun AdminProductListScreen(navController: NavController, viewModel: CarViewModel
         ) {
             LazyColumn {
                 items(filteredProducts.size) { index ->
-                    ProductItem(
+                    ProductItem1(
                         navController,
                         filteredProducts[index],
                         viewModel
@@ -189,7 +191,7 @@ fun AdminProductListScreen(navController: NavController, viewModel: CarViewModel
 
 @RequiresApi(Build.VERSION_CODES.Q)
 @Composable
-fun ProductItem(navController: NavController, product: Car, viewModel: CarViewModel) {
+fun ProductItem1(navController: NavController, product: Car, viewModel: CarViewModel) {
     val painter: Painter = rememberAsyncImagePainter(
         model = product.imagePath?.let { Uri.parse(it) } ?: Uri.EMPTY
     )
@@ -376,7 +378,7 @@ fun BottomNavigationBar1(navController: NavController) {
     ) {
         NavigationBarItem(
             selected = false,
-            onClick = { navController.navigate(ROUT_PRODUCT_LIST) },
+            onClick = { navController.navigate(ROUT_HOME) },
             icon = { Icon(Icons.Default.Home, contentDescription = "Product List") },
             label = { Text("Home") }
         )

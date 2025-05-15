@@ -36,6 +36,7 @@ import com.francis.drivedeal.navigation.ROUT_ADD_PRODUCT
 import com.francis.drivedeal.navigation.ROUT_ADMIN_PRODUCT_LIST
 
 import com.francis.drivedeal.navigation.ROUT_HOME
+import com.francis.drivedeal.navigation.ROUT_LOGIN
 import com.francis.drivedeal.navigation.ROUT_REGISTER
 import com.francis.drivedeal.navigation.ROUT_USER_DASHBOARD
 import com.francis.drivedeal.ui.theme.newblack
@@ -56,12 +57,6 @@ fun LoginScreen(
     var passwordVisible by remember { mutableStateOf(false) }
     val context = LocalContext.current
 
-    // Observe login logic (consider refactoring with Flow or LiveData)
-    LaunchedEffect(authViewModel) {
-        authViewModel.loggedInUser = { user ->
-
-        }
-    }
 
     Box(
         modifier = Modifier

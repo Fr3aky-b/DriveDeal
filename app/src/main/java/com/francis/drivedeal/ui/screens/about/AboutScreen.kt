@@ -23,6 +23,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -126,11 +127,15 @@ fun AboutScreen(navController: NavController) {
 
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(16.dp))
-        ) {
+                .clip(RoundedCornerShape(16.dp)),
+            colors = ButtonDefaults.buttonColors(newblue)
+        )
+
+        {
             Icon(Icons.Default.ArrowBack, contentDescription = "Back")
             Spacer(modifier = Modifier.width(8.dp))
             Text("Back to Home")
+
         }
     }
 }

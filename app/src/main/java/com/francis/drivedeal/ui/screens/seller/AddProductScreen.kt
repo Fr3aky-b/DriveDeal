@@ -97,6 +97,8 @@ fun AddProductScreen(navController: NavController, viewModel: CarViewModel) {
         bottomBar = {
             BottomNavigationBar(navController)
         },
+        containerColor = newwhite,
+
         content = { paddingValues ->
             Column(
                 modifier = Modifier
@@ -187,7 +189,7 @@ fun AddProductScreen(navController: NavController, viewModel: CarViewModel) {
                     },
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(8.dp),
-                    colors = ButtonDefaults.buttonColors(Color.LightGray)
+                    colors = ButtonDefaults.buttonColors(newblue)
                 ) {
                     Text("Add Product", fontSize = 18.sp, fontWeight = FontWeight.Bold)
                 }

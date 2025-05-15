@@ -48,6 +48,7 @@ import androidx.compose.ui.res.painterResource
 import com.francis.drivedeal.R
 import androidx.navigation.*
 import androidx.navigation.compose.*
+import com.francis.drivedeal.navigation.ROUT_CAR_DASHBOARD
 import com.francis.drivedeal.ui.theme.newblack
 import com.francis.drivedeal.ui.theme.newblue
 import com.francis.drivedeal.ui.theme.newwhite
@@ -74,16 +75,14 @@ fun BMWScreen(navController: NavController) {
                 title = { Text("BMW Collection", color = newblack) },
                 navigationIcon = {
                     IconButton(onClick = {
-                        navController.popBackStack()
+                        navController.navigate(ROUT_CAR_DASHBOARD)
                     }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = Color.White)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = newblue),
-                modifier = Modifier.background(
-                    Brush.horizontalGradient(
-                        listOf(Color(0xFF0F2027), Color(0xFF203A43), Color(0xFF2C5364))
-                    )
+                modifier = Modifier.background(newblue
+
                 )
             )
         }
@@ -143,16 +142,20 @@ fun BMWCarCard(car: BMWCar, navController: NavController) {
                         if (smsIntent.resolveActivity(context.packageManager) != null) {
                             context.startActivity(smsIntent)
                         }
-                    }
+
+
+                    },
+                    colors = ButtonDefaults.buttonColors(newblue)
+
                 ) {
-                    Text("Message Dealer")
+                    Text("Message Dealer", color = Color.White)
                 }
 
                 Button(
                     onClick = {
                         navController.navigate("purchase/${car.name}/${car.price}")
                     },
-                    colors = ButtonDefaults.buttonColors(Color(0xFF007AFF))
+                    colors = ButtonDefaults.buttonColors(newblue)
                 ) {
                     Text("Buy Now", color = Color.White)
                 }

@@ -23,6 +23,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.francis.drivedeal.R
 import com.francis.drivedeal.navigation.ROUT_HOME
+import com.francis.drivedeal.navigation.ROUT_REGISTER
 import com.francis.drivedeal.ui.theme.newblack
 import com.francis.drivedeal.ui.theme.newblue
 import com.francis.drivedeal.ui.theme.newwhite

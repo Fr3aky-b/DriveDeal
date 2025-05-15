@@ -43,6 +43,7 @@ import coil.compose.rememberAsyncImagePainter
 import com.francis.drivedeal.model.Car
 import com.francis.drivedeal.navigation.ROUT_ADD_PRODUCT
 import com.francis.drivedeal.navigation.ROUT_EDIT_PRODUCT
+import com.francis.drivedeal.navigation.ROUT_HOME
 import com.francis.drivedeal.navigation.ROUT_PRODUCT_LIST
 import com.francis.drivedeal.navigation.editProductRoute
 import com.francis.drivedeal.ui.theme.newblue
@@ -366,7 +367,7 @@ fun BottomNavigationBar1(navController: NavController) {
     ) {
         NavigationBarItem(
             selected = false,
-            onClick = { navController.navigate(ROUT_PRODUCT_LIST) },
+            onClick = { navController.navigate(ROUT_HOME) },
             icon = { Icon(Icons.Default.Home, contentDescription = "Product List") },
             label = { Text("Home") }
         )

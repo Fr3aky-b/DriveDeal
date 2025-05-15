@@ -205,7 +205,7 @@ fun HomeScreen(navController: NavController) {
                 Pair(R.drawable.bentl, "Bentley"),
                 Pair(R.drawable.benz, "Mercedes"),
                 Pair(R.drawable.bima, "BMW"),
-                Pair(R.drawable.cadillac, "Cadillac"),
+
                 Pair(R.drawable.lambo4, "Lamborghini"),
                 Pair(R.drawable.rolls, "Rolls Royce")
             )
@@ -274,8 +274,8 @@ fun HomeScreen(navController: NavController) {
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Text("Buyer", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = deepBlue)
-                        Text("Explore luxury cars", fontSize = 12.sp, color = deepBlue)
+                        Text("Buyer", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = Color.White)
+                        Text("Explore luxury cars", fontSize = 12.sp, color = Color.White)
                     }
                 }
 
@@ -295,8 +295,8 @@ fun HomeScreen(navController: NavController) {
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Text("Seller", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = deepBlue)
-                        Text("List your car today", fontSize = 12.sp, color = deepBlue)
+                        Text("Seller", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = Color.White)
+                        Text("List your car today", fontSize = 12.sp, color = Color.White)
                     }
                 }
             }
@@ -330,7 +330,7 @@ fun HomeScreen(navController: NavController) {
                     ) {
                         Text(
                             text = category,
-                            color = accentColor,
+                            color = Color.White,
                             fontSize = 14.sp,
                             modifier = Modifier
                                 .padding(horizontal = 20.dp, vertical = 10.dp)
@@ -370,7 +370,7 @@ fun HomeScreen(navController: NavController) {
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(modifier = Modifier.padding(16.dp)) {
-                            Text(text = "\"$quote\"", fontStyle = FontStyle.Italic, color = Color.DarkGray)
+                            Text(text = "\"$quote\"", fontStyle = FontStyle.Italic, color = Color.White)
                             Spacer(modifier = Modifier.height(8.dp))
                             Text(text = "- $author", fontWeight = FontWeight.Bold, color = accentColor)
                         }

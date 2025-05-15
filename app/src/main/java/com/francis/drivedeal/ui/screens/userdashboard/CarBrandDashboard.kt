@@ -101,7 +101,7 @@ const val ROUT_MERCEDES = "benz"
 const val ROUT_LAMBO = "lambo"
 const val ROUT_ROLLS = "rolls"
 const val ROUT_BENTLEY = "bentley"
-const val ROUT_CADILLAC = "cadillac"
+
 
 
 
@@ -182,7 +182,7 @@ fun CarDashboardScreen(navController: NavController) {
                             "Lamborghini" -> navController.navigate(ROUT_LAMBO)
                             "Rolls-Royce" -> navController.navigate(ROUT_ROLLS)
                             "Bentley" -> navController.navigate(ROUT_BENTLEY)
-                            "Cadillac" -> navController.navigate(ROUT_CADILLAC)
+
                         }
                     }
                 }

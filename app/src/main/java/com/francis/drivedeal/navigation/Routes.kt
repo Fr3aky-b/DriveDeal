@@ -19,7 +19,7 @@ const val ROUT_ROLLS = "rolls"
 
 const val ROUT_ADD_PRODUCT = "add_product"
 const val ROUT_PRODUCT_LIST = "product_list"
-const val ROUT_ADMIN_PRODUCT_LIST = "product_list"
+const val ROUT_ADMIN_PRODUCT_LIST = "admin_product_list"
 const val ROUT_EDIT_PRODUCT = "edit_product/{productId}"
 
 // ✅ Helper function for navigation

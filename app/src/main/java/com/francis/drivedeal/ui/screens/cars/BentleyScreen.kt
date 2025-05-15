@@ -64,16 +64,12 @@ fun BentleyScreen(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Bentley Collection", color = newblack) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.navigate(ROUT_USER_DASHBOARD)
-                    {popUpTo(ROUT_CAR_DASHBOARD) { inclusive = true }} }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = Color.White)
-                    }
+                title = { Text("Bentley Collection", color = newblack, fontWeight = FontWeight.ExtraBold)
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = newblue)
             )
-        }
+        },
+        containerColor = newwhite
     ) { paddingValues ->
         LazyColumn(
             contentPadding = PaddingValues(16.dp),
@@ -81,7 +77,7 @@ fun BentleyScreen(navController: NavController) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .background(newwhite)
+
         ) {
             items(bentleyList) { car ->
                 BentleyCarCard(

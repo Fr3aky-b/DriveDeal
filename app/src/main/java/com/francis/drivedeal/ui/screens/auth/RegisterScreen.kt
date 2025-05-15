@@ -172,18 +172,14 @@ fun RegisterScreen(
               modifier = Modifier.fillMaxWidth()
           )
 
-          Spacer(modifier = Modifier.height(8.dp))
 
-          // Role Dropdown
-          ExposedDropdownMenuBox(
-              expanded = expanded,
-              onExpandedChange = { expanded = !expanded }
-          ) {
+              Spacer(modifier = Modifier.height(8.dp))
 
 
-          }
 
-          Spacer(modifier = Modifier.height(8.dp))
+
+
+
 
           // Password
           OutlinedTextField(
@@ -250,7 +246,7 @@ fun RegisterScreen(
                           Toast.makeText(context, "Passwords do not match", Toast.LENGTH_SHORT).show()
                       } else {
                           authViewModel.registerUser(
-                              User(username = username, email = email,  password = password)
+                              User(username = username, email = email, password = password)
                           )
                           onRegisterSuccess()
                       }

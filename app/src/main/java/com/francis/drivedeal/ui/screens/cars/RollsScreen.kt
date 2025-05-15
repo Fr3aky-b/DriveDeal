@@ -116,7 +116,7 @@ fun RollsScreen(navController: NavController) {
                                 },
                                 colors = ButtonDefaults.buttonColors(containerColor = newblue)
                             ) {
-                                Text("Message Dealer", color =newwhite )
+                                Text("Message Dealer", color =Color.White)
                             }
 
                             Button(
